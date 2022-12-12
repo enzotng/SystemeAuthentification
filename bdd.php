@@ -2,7 +2,7 @@
 $local = "localhost";
 $utilisateur = "root";
 $mdp = "";
-$bdd = "tp";
+$bdd = "test";
 
 $mysqli = new mysqli($local, $utilisateur, $mdp, $bdd);
 

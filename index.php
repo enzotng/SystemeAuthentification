@@ -1,5 +1,5 @@
 <?php
-session_start()
+session_start();
 ?>
 
 <?php include 'header.php';?>
@@ -10,7 +10,6 @@ session_start()
    $_SESSION["email"] = "enzotang@live.fr";
    $_SESSION["heure"] = time();
    header('Location: page2.php');
-    exit;
 ?>
 
 <?php include 'footer.php';?>
