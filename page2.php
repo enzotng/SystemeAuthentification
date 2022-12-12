@@ -3,7 +3,6 @@ session_start()
 ?>
 
 <?php include 'header.php';?>
-<?php include 'footer.php';?>
 
 <main>
     <section class="accueil">
@@ -27,3 +26,5 @@ session_start()
         </div>
     </section>
 </main>
+
+<?php include 'footer.php';?>

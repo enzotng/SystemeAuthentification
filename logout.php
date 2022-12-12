@@ -5,7 +5,6 @@ session_destroy();
 ?>
 
 <?php include 'header.php';?>
-<?php include 'footer.php';?>
 
 <main>
     <section class="deconnexion">
@@ -13,7 +12,9 @@ session_destroy();
 
         <div class="bouton_deconnexion">
         <p>Copyright © 2022 Enzo Tang. All Rights Reserved.</p>    
-        <a href="login.php">Se reconnecter</a>
+        <a href="login.php">Connexion <i class="bi bi-box-arrow-in-right"></i></a>
         </div>
     </section>
 </main>
+
+<?php include 'footer.php';?>

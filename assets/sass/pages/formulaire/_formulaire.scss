@@ -1,0 +1,55 @@
+.formulaire {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: $background;
+    .titre{
+        background: $blanc;
+        width: 90vw;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        text-align: center;
+        margin-block-end: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    form{
+        background: $blanc;
+        width: 90vw;
+        height: auto;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 20px;
+        flex-direction: column;
+        label{
+            font-weight: bold;
+            margin-block: 20px;
+        }
+        input{
+            border: none;
+            background: $background;
+            padding: 15px;
+            width: 100%;
+            border-radius: 5px;
+            font-family: $corps-texte;
+            margin-block-start: 20px;
+        }
+        input[type="submit"]{
+            background: $background;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover{
+                color: red;
+            }
+        }
+    }
+}

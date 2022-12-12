@@ -3,7 +3,6 @@ session_start()
 ?>
 
 <?php include 'header.php';?>
-<?php include 'footer.php';?>
 
 <?php
    $_SESSION["prenom"] = "Enzo";
@@ -13,3 +12,5 @@ session_start()
    header('Location: page2.php');
     exit;
 ?>
+
+<?php include 'footer.php';?>
