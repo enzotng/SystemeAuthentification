@@ -1,0 +1,60 @@
+.accueil {
+    height: 100vh;
+    background: $background;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    .bouton_deconnexion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        a {
+            background: $blanc;
+            padding: 15px;
+            border-radius: 5px;
+            float: right;
+            transition: all 0.3s;
+            &:hover{
+                color: $background;
+            }
+        }
+    }
+    .titre {
+        background: $blanc;
+        width: 90vw;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        margin-block-end: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .box_infos {
+        width: 90vw;
+        background: $blanc;
+        border-radius: 10px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .row_infos {
+            display: flex;
+            width: 90vw;
+            .corps_infos {
+                flex: 50%;
+                padding: 0px 20px;
+                p {
+                    padding: 20px;
+                    margin-block: 20px;
+                    border-radius: 5px;
+                    background: $background;
+                }
+            }
+        }
+    }
+}

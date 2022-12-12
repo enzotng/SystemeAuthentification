@@ -1,0 +1,265 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: #0e0e0e;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #0e0e0e;
+}
+
+.accueil {
+  height: 100vh;
+  background: #F0F3F4;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.accueil .bouton_deconnexion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+}
+.accueil .bouton_deconnexion a {
+  background: #FFFFFF;
+  padding: 15px;
+  border-radius: 5px;
+  float: right;
+  transition: all 0.3s;
+}
+.accueil .bouton_deconnexion a:hover {
+  color: #F0F3F4;
+}
+.accueil .titre {
+  background: #FFFFFF;
+  width: 90vw;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-block-end: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.accueil .box_infos {
+  width: 90vw;
+  background: #FFFFFF;
+  border-radius: 10px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.accueil .box_infos .row_infos {
+  display: flex;
+  width: 90vw;
+}
+.accueil .box_infos .row_infos .corps_infos {
+  flex: 50%;
+  padding: 0px 20px;
+}
+.accueil .box_infos .row_infos .corps_infos p {
+  padding: 20px;
+  margin-block: 20px;
+  border-radius: 5px;
+  background: #F0F3F4;
+}
+
+.deconnexion {
+  height: 100vh;
+  background: #F0F3F4;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.deconnexion .bouton_deconnexion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+}
+.deconnexion .bouton_deconnexion a {
+  background: #FFFFFF;
+  padding: 15px;
+  border-radius: 5px;
+  float: right;
+  transition: all 0.3s;
+}
+.deconnexion .bouton_deconnexion a:hover {
+  color: #FFFFFF;
+}
+.deconnexion .titre {
+  background: #FFFFFF;
+  width: 90vw;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-block-end: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=style.css.map */

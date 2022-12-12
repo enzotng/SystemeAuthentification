@@ -1,0 +1,36 @@
+.deconnexion {
+    height: 100vh;
+    background: $background;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    .bouton_deconnexion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        a {
+            background: $blanc;
+            padding: 15px;
+            border-radius: 5px;
+            float: right;
+            transition: all 0.3s;
+            &:hover{
+                color: $blanc;
+            }
+        }
+    }
+    .titre {
+        background: $blanc;
+        width: 90vw;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        margin-block-end: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
