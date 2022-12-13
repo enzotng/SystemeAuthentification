@@ -4,6 +4,18 @@ session_start();
 
 <?php include 'header.php'; ?>
 
+<?php
+
+if ($nom == $_SESSION[$nom]) {
+    echo "Haha";
+} else {
+    header('Location: index.php');
+    exit();
+}
+
+?>
+
+
 <main>
     <section class="user">
         <div class="box_user">

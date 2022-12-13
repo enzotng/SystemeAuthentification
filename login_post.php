@@ -25,13 +25,15 @@ if (isset($_POST['nom']) && isset($_POST['mdp'])) {
             $_SESSION['nom'] = $username;
             header('Location: user_page.php');
         } else {
-            echo "Tu t'es trompé chef";
+            echo "<script>alert(\"Mskn\")</script>";
+            echo '<a href="">Se reconnecter</a>';
         }
     } else {
-        echo "Poto, le champ est vide";
+        echo "<script>alert(\"Mskn\")</script>";
+        echo '<a href="formulaire.php">Se reconnecter</a>';
     }
 } else {
-    header('Location: login.php');
+    header('Location: formulaire.php');
 }
 mysqli_close($db); // fermer la connexion
 ?>
