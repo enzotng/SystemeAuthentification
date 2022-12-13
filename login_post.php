@@ -4,7 +4,7 @@ if (isset($_POST['nom']) && isset($_POST['mdp'])) {
     // connexion à la base de données
     $db_username = 'root';
     $db_password = '';
-    $db_name = 'test';
+    $db_name = 'tp';
     $db_host = 'localhost';
     $db = mysqli_connect($db_host, $db_username, $db_password, $db_name)
         or die('could not connect to database');
@@ -23,7 +23,7 @@ if (isset($_POST['nom']) && isset($_POST['mdp'])) {
         if ($count != 0) // nom d'utilisateur et mot de passe correctes
         {
             $_SESSION['nom'] = $username;
-            header('Location: principale.php');
+            header('Location: user_page.php');
         } else {
             header('Location: login.php?erreur=1'); // utilisateur ou mot de passe incorrect
         }

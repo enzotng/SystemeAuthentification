@@ -1,0 +1,19 @@
+.user{
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .box_user{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        flex-direction: column;
+        background: $background;
+        height: 80vh;
+        width: 90vw;
+        border-radius: 10px;
+    }
+}
