@@ -16,37 +16,39 @@
   }
   form {
     background: $blanc;
-    height: 60vh;
+    height: 100%;
+    margin: 5rem;
     width: 90vw;
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
     padding: 20px;
+    position: relative;
     flex-direction: column;
     filter: drop-shadow(0rem 2rem 3rem rgba(0, 0, 0, 0.2));
     .titre {
-      height: 100px;
       text-align: center;
-      margin-block-end: 20px;
       font-weight: bold;
       text-transform: uppercase;
+      top: 20px;
+      position: absolute;
     }
     .corps_form {
       position: relative;
-      margin-bottom: 15px;
       width: 100%;
-      label {
+      margin-block: 20px;
+      label[for=nom], [for=mdp]  {
         position: absolute;
         z-index: 2;
-        top: 13px;
+        top: -10px;
         left: 10px;
         background: $blanc;
         padding: 0 10px;
         color: $gris;
         transition: all 0.3s ease;
       }
-      input {
+      input[type="text"], [type="password"] {
         display: block;
         background: transparent;
         width: 100%;
@@ -58,16 +60,40 @@
         font-size: 1rem;
         font-family: $corps-texte;
         &:focus {
-          border-color: $bouton;
+          border-color: blue;
+          + {
+            label {
+              font-size: 1rem;
+              top: -5px;
+              color: blue;
+            }
+          }
         }
-        &:focus + label,
-        &:valid + label {
-          font-size: 1rem;
-          top: -5px;
+        &:valid {
+          + {
+            label {
+              font-size: 1rem;
+              top: -5px;
+            }
+          }
         }
       }
     }
+    .radio{
+      background: $background;
+      border-radius: 5px;
+      padding: 15px;
+      input[type="radio"]{
+        margin-inline: 5px;
+      }
+      input[id="admin"], label[for="admin"]{
+        float: right;
+      }
+    }
     input[type="submit"] {
+      position: absolute;
+      width: calc(100% - 40px);
+      bottom: 20px;
       border: none;
       padding: 15px;
       background: $bouton;
@@ -87,8 +113,12 @@
 
 @media screen and (min-width: $laptop) {
   .formulaire form {
-     width: 20vw;
+     width: 400px;
      height: 50vh;
-     padding: 40px;
+     margin: 5rem;
+     padding: 30px;
+     input[type="submit"] {
+      width: calc(100% - 60px);
+    }
    }
 }

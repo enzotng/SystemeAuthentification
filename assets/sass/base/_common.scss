@@ -2,7 +2,6 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: $corps-texte;
-  overflow: hidden;
 }
 
 html,
@@ -12,7 +11,7 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: clamp(1.125rem, 1.130952380952381rem + 0.5952380952380952vw, 1.5rem);
 }
 
 a {

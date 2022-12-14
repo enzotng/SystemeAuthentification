@@ -145,7 +145,6 @@ table {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Open Sans";
-  overflow: hidden;
 }
 
 html,
@@ -155,7 +154,7 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: clamp(1.125rem, 1.130952381rem + 0.5952380952vw, 1.5rem);
 }
 
 a {
@@ -282,39 +281,41 @@ a {
 }
 .formulaire form {
   background: #FFFFFF;
-  height: 60vh;
+  height: 100%;
+  margin: 5rem;
   width: 90vw;
   border-radius: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
   padding: 20px;
+  position: relative;
   flex-direction: column;
   filter: drop-shadow(0rem 2rem 3rem rgba(0, 0, 0, 0.2));
 }
 .formulaire form .titre {
-  height: 100px;
   text-align: center;
-  margin-block-end: 20px;
   font-weight: bold;
   text-transform: uppercase;
+  top: 20px;
+  position: absolute;
 }
 .formulaire form .corps_form {
   position: relative;
-  margin-bottom: 15px;
   width: 100%;
+  margin-block: 20px;
 }
-.formulaire form .corps_form label {
+.formulaire form .corps_form label[for=nom], .formulaire form .corps_form [for=mdp] {
   position: absolute;
   z-index: 2;
-  top: 13px;
+  top: -10px;
   left: 10px;
   background: #FFFFFF;
   padding: 0 10px;
   color: #999999;
   transition: all 0.3s ease;
 }
-.formulaire form .corps_form input {
+.formulaire form .corps_form input[type=text], .formulaire form .corps_form [type=password] {
   display: block;
   background: transparent;
   width: 100%;
@@ -326,14 +327,33 @@ a {
   font-size: 1rem;
   font-family: "Open Sans";
 }
-.formulaire form .corps_form input:focus {
-  border-color: #3F2B96;
+.formulaire form .corps_form input[type=text]:focus, .formulaire form .corps_form [type=password]:focus {
+  border-color: blue;
 }
-.formulaire form .corps_form input:focus + label, .formulaire form .corps_form input:valid + label {
+.formulaire form .corps_form input[type=text]:focus + label, .formulaire form .corps_form [type=password]:focus + label {
+  font-size: 1rem;
+  top: -5px;
+  color: blue;
+}
+.formulaire form .corps_form input[type=text]:valid + label, .formulaire form .corps_form [type=password]:valid + label {
   font-size: 1rem;
   top: -5px;
 }
+.formulaire form .radio {
+  background: #F0F3F4;
+  border-radius: 5px;
+  padding: 15px;
+}
+.formulaire form .radio input[type=radio] {
+  margin-inline: 5px;
+}
+.formulaire form .radio input[id=admin], .formulaire form .radio label[for=admin] {
+  float: right;
+}
 .formulaire form input[type=submit] {
+  position: absolute;
+  width: calc(100% - 40px);
+  bottom: 20px;
   border: none;
   padding: 15px;
   background: #3F2B96;
@@ -351,9 +371,13 @@ a {
 
 @media screen and (min-width: 992px) {
   .formulaire form {
-    width: 20vw;
+    width: 400px;
     height: 50vh;
-    padding: 40px;
+    margin: 5rem;
+    padding: 30px;
+  }
+  .formulaire form input[type=submit] {
+    width: calc(100% - 60px);
   }
 }
 .user {
