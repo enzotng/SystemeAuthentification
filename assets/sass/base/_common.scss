@@ -1,14 +1,13 @@
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: $corps-texte;
+  overflow: hidden;
 }
 
 html,
 body {
-  box-sizing: border-box;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
   font-size: 1rem;
-  font-family: $corps-texte;
   color: $noir;
 }
 
@@ -16,7 +15,7 @@ h1 {
   font-size: 2rem;
 }
 
-a{
+a {
   text-decoration: none;
   color: $noir;
 }
