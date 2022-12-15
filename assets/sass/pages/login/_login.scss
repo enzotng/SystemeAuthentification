@@ -1,0 +1,25 @@
+.login{
+    height: 100vh;
+    background: linear-gradient(0deg, $bouton 0%, $bleu-clair 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1{
+        color: $background;
+        text-transform: uppercase;
+    }
+    .bouton_deconnexion {
+        margin: 1rem;
+        a {
+            background: $blanc;
+            padding: 15px;
+            border-radius: 5px;
+            float: right;
+            transition: all 0.3s;
+            &:hover {
+                color: $background;
+            }
+        }
+    }
+}

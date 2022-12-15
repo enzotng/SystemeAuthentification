@@ -7,7 +7,7 @@
   background: linear-gradient(0deg, $bouton 0%, $bleu-clair 100%);
   padding: 20px;
   position: relative;
-  p {
+  .footer_form {
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -21,7 +21,7 @@
     width: 90vw;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: stretch;
     padding: 20px;
     position: relative;
@@ -31,14 +31,12 @@
       text-align: center;
       font-weight: bold;
       text-transform: uppercase;
-      top: 20px;
-      position: absolute;
     }
     .corps_form {
       position: relative;
       width: 100%;
       margin-block: 20px;
-      label[for=nom], [for=mdp]  {
+      label[for=user_name], [for=password]  {
         position: absolute;
         z-index: 2;
         top: -10px;
@@ -60,12 +58,12 @@
         font-size: 1rem;
         font-family: $corps-texte;
         &:focus {
-          border-color: blue;
+          border-color: $bouton;
           + {
             label {
               font-size: 1rem;
               top: -5px;
-              color: blue;
+              color: $bouton;
             }
           }
         }
@@ -83,6 +81,11 @@
       background: $background;
       border-radius: 5px;
       padding: 15px;
+      p{
+        font-weight: bold;
+        padding-block-end: 1rem;
+        text-align: left;
+      }
       input[type="radio"]{
         margin-inline: 5px;
       }

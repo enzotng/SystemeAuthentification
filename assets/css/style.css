@@ -272,7 +272,7 @@ a {
   padding: 20px;
   position: relative;
 }
-.formulaire p {
+.formulaire .footer_form {
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -286,7 +286,7 @@ a {
   width: 90vw;
   border-radius: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: stretch;
   padding: 20px;
   position: relative;
@@ -297,15 +297,13 @@ a {
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
-  top: 20px;
-  position: absolute;
 }
 .formulaire form .corps_form {
   position: relative;
   width: 100%;
   margin-block: 20px;
 }
-.formulaire form .corps_form label[for=nom], .formulaire form .corps_form [for=mdp] {
+.formulaire form .corps_form label[for=user_name], .formulaire form .corps_form [for=password] {
   position: absolute;
   z-index: 2;
   top: -10px;
@@ -328,12 +326,12 @@ a {
   font-family: "Open Sans";
 }
 .formulaire form .corps_form input[type=text]:focus, .formulaire form .corps_form [type=password]:focus {
-  border-color: blue;
+  border-color: #3F2B96;
 }
 .formulaire form .corps_form input[type=text]:focus + label, .formulaire form .corps_form [type=password]:focus + label {
   font-size: 1rem;
   top: -5px;
-  color: blue;
+  color: #3F2B96;
 }
 .formulaire form .corps_form input[type=text]:valid + label, .formulaire form .corps_form [type=password]:valid + label {
   font-size: 1rem;
@@ -343,6 +341,11 @@ a {
   background: #F0F3F4;
   border-radius: 5px;
   padding: 15px;
+}
+.formulaire form .radio p {
+  font-weight: bold;
+  padding-block-end: 1rem;
+  text-align: left;
 }
 .formulaire form .radio input[type=radio] {
   margin-inline: 5px;
@@ -380,9 +383,35 @@ a {
     width: calc(100% - 60px);
   }
 }
+.login {
+  height: 100vh;
+  background: linear-gradient(0deg, #3F2B96 0%, #A8C0FF 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login h1 {
+  color: #F0F3F4;
+  text-transform: uppercase;
+}
+.login .bouton_deconnexion {
+  margin: 1rem;
+}
+.login .bouton_deconnexion a {
+  background: #FFFFFF;
+  padding: 15px;
+  border-radius: 5px;
+  float: right;
+  transition: all 0.3s;
+}
+.login .bouton_deconnexion a:hover {
+  color: #F0F3F4;
+}
+
 .user {
   height: 100vh;
-  background: white;
+  background: linear-gradient(0deg, #3F2B96 0%, #A8C0FF 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -390,14 +419,160 @@ a {
 }
 .user .box_user {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  align-items: stretch;
   padding: 20px;
   flex-direction: column;
   background: #F0F3F4;
   height: 80vh;
   width: 90vw;
   border-radius: 10px;
+  filter: drop-shadow(0rem 2rem 3rem rgba(0, 0, 0, 0.2));
+}
+.user .box_user h1 {
+  background: #FFFFFF;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.user .box_user .corps_user {
+  background: #FFFFFF;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  border-radius: 5px;
+  height: 30vh;
+}
+.user .box_user .corps_user p {
+  padding-block: 1rem;
+}
+.user .box_user .bouton_redirection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.user .box_user .bouton_redirection a {
+  background: #FFFFFF;
+  padding: 15px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  text-align: center;
+  width: 100%;
+}
+.user .box_user .bouton_redirection a:hover {
+  color: #F0F3F4;
+}
+
+@media screen and (min-width: 992px) {
+  .user .box_user {
+    width: 400px;
+    height: 50vh;
+    margin: 5rem;
+    padding: 20px;
+  }
+  .user .box_user .bouton_deconnexion {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .user .box_user .bouton_deconnexion a {
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    width: 100%;
+  }
+  .user .box_user .bouton_deconnexion a:hover {
+    color: #F0F3F4;
+  }
+}
+.admin {
+  height: 100vh;
+  background: linear-gradient(0deg, #3F2B96 0%, #A8C0FF 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.admin .box_admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px;
+  flex-direction: column;
+  background: #F0F3F4;
+  height: 80vh;
+  width: 90vw;
+  border-radius: 10px;
+  filter: drop-shadow(0rem 2rem 3rem rgba(0, 0, 0, 0.2));
+}
+.admin .box_admin h1 {
+  background: #FFFFFF;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.admin .box_admin .corps_admin {
+  background: #FFFFFF;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  border-radius: 5px;
+  height: 30vh;
+}
+.admin .box_admin .corps_admin p {
+  padding-block: 1rem;
+}
+.admin .box_admin .bouton_redirection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.admin .box_admin .bouton_redirection a {
+  background: #FFFFFF;
+  padding: 15px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  width: 100%;
+}
+.admin .box_admin .bouton_redirection a:hover {
+  color: #F0F3F4;
+}
+
+@media screen and (min-width: 992px) {
+  .admin .box_admin {
+    width: 400px;
+    height: 50vh;
+    margin: 5rem;
+    padding: 20px;
+  }
+  .admin .box_admin .bouton_deconnexion {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .admin .box_admin .bouton_deconnexion a {
+    background: #3F2B96;
+    padding: 15px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    transition: all 0.3s;
+    text-align: center;
+    width: 100%;
+  }
+  .admin .box_admin .bouton_deconnexion a:hover {
+    color: #F0F3F4;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
