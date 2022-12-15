@@ -30,6 +30,8 @@ session_start();
 
             <input type="submit" id="btn_submit" name="btn_submit" value="Se connecter">
         </form>
+        
+        <a class="a_form" href="sources.zip" download="sources.zip"><i class="bi bi-download"></i> Télécharger les fichiers sources</a>
         <p class="footer_form">Copyright © 2022 Enzo Tang. All Rights Reserved.</p>
     </section>
 </main>

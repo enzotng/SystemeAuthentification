@@ -7,6 +7,27 @@
   background: linear-gradient(0deg, $bouton 0%, $bleu-clair 100%);
   padding: 20px;
   position: relative;
+  .a_form {
+    position: absolute;
+    bottom: 60px;
+    text-align: center;
+    background: $blanc;
+    width: 360px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $noir;
+    border-radius: 5px;
+    transition: all 0.3s;
+    &:hover{
+      background: $bouton;
+      color: $blanc;
+    }
+    i{
+      margin-inline-end: 5px;
+    }
+  }
   .footer_form {
     position: absolute;
     bottom: 0;
